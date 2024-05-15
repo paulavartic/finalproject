@@ -25,7 +25,7 @@ def pop_up_msg(item: dict[str, Any]):
 
 def get_date(date):
     date_raw = date[0:10].split(sep="-")
-    return f"{date_raw[2]},{date_raw[1]},{date_raw[0]}"
+    return f"{date_raw[2]}.{date_raw[1]}.{date_raw[0]}"
 
 
 def hide_acc(number: str):
