@@ -8,7 +8,7 @@ def organized_operations(data):
 
 
 def pop_up_msg(item: dict[str, Any]):
-    date = item.get("date")
+    date = get_date(item.get("date"))
     descr = item.get("description")
     sender = hide_transaction(item.get("from"))
     receiver = hide_transaction(item.get("to"))
