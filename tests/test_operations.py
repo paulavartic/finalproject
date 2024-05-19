@@ -10,6 +10,10 @@ def test_hide_acc():
     assert hide_acc("72731966109147704472") == "**4472"
 
 
+def test_hide_acc_negative():
+    assert hide_acc("7273196610914770447t") == "Invalid"
+
+
 def test_hide_card():
     assert hide_card("5999414228426353") == "5999 41** **** 6353"
 
@@ -20,6 +24,10 @@ def test_hide_card_negative():
 
 def test_hide_transaction():
     assert hide_transaction("Счет 72731966109147704472") == "Счет **4472"
+
+
+def test_hide_transaction_negative():
+    assert hide_transaction(None) == ""
 
 
 def test_pop_up_msg():
@@ -37,3 +45,5 @@ def test_pop_up_msg():
     "from": "Maestro 1596837868705199",
     "to": "Счет 64686473678894779589"
   }) == "26.08.2019 Перевод организации\nMaestro 1596 83** **** 5199 -> Счет **9589\n31957.58 руб."
+
+
